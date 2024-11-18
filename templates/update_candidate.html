@@ -1,0 +1,86 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Candidate</title>
+    <link rel="stylesheet" href="/static/css/styles.css">
+    
+    <script src="/static/js/script.js"></script>
+</head>
+<body  style="background-image: url('/static/css/bg2.jpg'); background-size: cover; background-repeat: no-repeat;">
+    <header class="header">
+        <h1 class="hd">CANDIDATE RANKING AND SELECTION SYSTEM</h1>
+    </header>
+    
+<div class="container">
+    <!-- Tabs for navigation -->
+    <div class="tabs">
+        <a href="/add_candidate">Add Candidate</a>
+        <a href="/classify_candidates">Classify Candidates</a>
+        <a href="/update_candidate" class="active">Update Candidate</a><br>
+        <a href="/delete_candidate">Delete Candidate</a><br>
+        <a href="/login">Log out</a>
+    </div>
+
+    <h2>Update Candidate</h2>
+
+    <!-- Display flash messages -->
+    {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+            <ul class="flashes">
+                {% for category, message in messages %}
+                    <li class="{{ category }}">{{ message }}</li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+    {% endwith %}
+
+    <form action="/update_candidate" method="POST" id="update-candidate-form">
+        <!-- Candidate ID -->
+        <label for="candidate_id">Candidate ID:</label>
+        <input type="text" name="candidate_id" required><br>
+
+        <!-- Field selection dropdown -->
+        <label for="field-select">Select Field to Update:</label>
+        <select id="field-select" name="field" onchange="showFieldInput()" required>
+            <option value="">Select a field</option>
+            <option value="name">Name</option>
+            <option value="email">Email</option>
+            <option value="phone">Phone</option>
+            <option value="cgpa">CGPA</option>
+            <option value="interview_score">Interview Score</option>
+        </select><br>
+
+        <!-- Input fields for each option, hidden by default -->
+        <div id="name-input" style="display: none;">
+            <label for="name">Name:</label>
+            <input type="text" name="name">
+        </div>
+
+        <div id="email-input" style="display: none;">
+            <label for="email">Email:</label>
+            <input type="email" name="email">
+        </div>
+
+        <div id="phone-input" style="display: none;">
+            <label for="phone">Phone:</label>
+            <input type="text" name="phone">
+        </div>
+
+        <div id="cgpa-input" style="display: none;">
+            <label for="cgpa">CGPA:</label>
+            <input type="number" step="0.01" name="cgpa">
+        </div>
+
+        <div id="interview_score-input" style="display: none;">
+            <label for="interview_score">Interview Test Score:</label>
+            <input type="number" step="0.01" name="interview_score">
+        </div>
+
+        <button type="submit">Update Candidate</button>
+    </form>
+</div>
+</body>
+</html>

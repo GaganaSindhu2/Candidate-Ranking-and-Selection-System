@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Candidate</title>
+    <link rel="stylesheet" href="/static/css/styles.css">
+</head>
+<body style="background-image: url('/static/css/bg2.jpg');background-size: cover;background-attachment: fixed;">
+
+<!-- Header for the page title -->
+<header class="header">
+    <h1 class="hd">CANDIDATE RANKING AND SELECTION SYSTEM</h1>
+</header>
+
+<div class="container">
+    <!-- Tabs for navigation -->
+    <div class="tabs">
+        <a href="/add_candidate" class="active">Add Candidate</a>
+        <a href="/classify_candidates">Classify Candidates</a>
+        <a href="/update_candidate">Update Candidate</a>
+        <a href="/delete_candidate">Delete Candidate</a>
+        <a href="/login">Log out</a>
+    </div>
+
+    <h2>Add a Candidate</h2>
+
+    <!-- Display flash messages -->
+    {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+            <ul class="flashes">
+                {% for category, message in messages %}
+                    <li class="{{ category }}">{{ message }}</li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+    {% endwith %}
+
+    <form action="/add_candidate" method="POST" id="add-candidate-form">
+        <label for="name">Name:</label>
+        <input type="text" name="name" required>
+
+        <label for="email">Email:</label>
+        <input type="email" name="email" required>
+
+        <label for="phone">Phone:</label>
+        <input type="text" name="phone" required>
+
+        <label for="cgpa">CGPA:</label>
+        <input type="number" step="0.01" name="cgpa" required>
+
+        <label for="interview_score">Interview Test Score:</label>
+        <input type="number" step="1" name="interview_score" required>
+
+        <label for="title">Title:</label>
+        <input type="title" name="title" required>
+
+        <button type="submit">Add Candidate</button>
+    </form>
+</div>
+
+</body>
+</html>

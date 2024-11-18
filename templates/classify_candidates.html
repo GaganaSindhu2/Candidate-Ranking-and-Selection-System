@@ -1,0 +1,127 @@
+<!---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classify Candidates</title>
+    <link rel="stylesheet" href="/static/css/styles.css">
+</head>
+<body>
+    <h1 class='hd'>CANDIDATE RANKING AND SELECTION SYSTEM</h1>
+<div class="container">
+   
+    <div class="tabs">
+        <a href="/add_candidate">Add Candidate</a>
+        <a href="/classify_candidates" class="active">Classify Candidates</a>
+        <a href="/update_candidate">Update Candidate</a><br>
+        <a href="/delete_candidate">Delete Candidate</a><br>
+
+    </div>
+
+    <h2>Classify Candidates</h2>
+    <form id="classify-form">
+        <label for="criterion">Classification Criterion:</label>
+        <select id="criterion" name="criterion" onchange="updateRangeOptions()">
+            <option value="" disabled selected>Select Criteria</option> 
+            <option value="CGPA">CGPA</option>
+            <option value="Interview Test Score">Interview Test Score</option>
+            
+        </select>
+    
+        <label for="range">Select Range:</label>
+        <select id="range" name="range">
+            <option value="" disabled selected>Select Range</option> 
+        </select>
+    
+        <button type="button" onclick="classifyCandidates()">Classify</button>
+    </form>
+    
+
+    <h2>Classified Candidates</h2>
+    <table id="results-table">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Phone</th>
+                <th>Email</th>
+                <th>Score</th>
+                <th>Total score</th>
+
+            </tr>
+        </thead>
+        <tbody>
+           
+        </tbody>
+    </table>
+
+</div>
+
+<script src="/static/js/script.js"></script>
+</body>
+</html>
+--->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classify Candidates</title>
+    <link rel="stylesheet" href="/static/css/styles.css">
+</head>
+<body  style="background-image: url('/static/css/bg2.jpg'); background-size: cover; background-repeat: no-repeat;">
+    <header class="header">
+        <h1 class="hd">CANDIDATE RANKING AND SELECTION SYSTEM</h1>
+    </header>
+    
+    <div class="container">
+        <!-- Tabs for navigation -->
+        <div class="tabs">
+            <a href="/add_candidate">Add Candidate</a>
+            <a href="/classify_candidates" class="active">Classify Candidates</a>
+            <a href="/update_candidate">Update Candidate</a>
+            <a href="/delete_candidate">Delete Candidate</a>
+            <a href="/login">Log out</a>
+        </div>
+
+        <h2>Classify Candidates</h2>
+        <form id="classify-form">
+            <label for="criterion">Classification Criterion:</label>
+            <select id="criterion" name="criterion" onchange="updateRangeOptions()">
+                <option value="" disabled selected>Select Criteria</option> <!-- Placeholder option -->
+                <option value="CGPA">CGPA</option>
+                <option value="Interview Test Score">Interview Test Score</option>
+            </select>
+        
+            <label for="range">Select Range:</label>
+            <select id="range" name="range">
+                <option value="" disabled selected>Select Range</option> <!-- Placeholder option -->
+            </select>
+        
+            <button type="button" onclick="classifyCandidates()">Classify</button>
+        </form>
+        
+        <h2>Classified Candidates</h2>
+        <table id="results-table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Phone</th>
+                    <th>Email</th>
+                    <th>Score</th>
+                    <th>Total Score</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Results will be populated here -->
+            </tbody>
+        </table>
+    </div>
+
+    <script src="/static/js/script.js"></script>
+    
+</body>
+</html>

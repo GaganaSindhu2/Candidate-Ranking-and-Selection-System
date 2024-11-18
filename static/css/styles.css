@@ -1,0 +1,254 @@
+/*
+body {
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    width: 50%;
+    margin: auto;
+    padding: 20px;
+}
+
+.tabs {
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 20px;
+}
+
+.tabs a {
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #333;
+    border: 1px solid #ccc;
+    margin-right: 10px;
+    background-color: #f4f4f4;
+    border-radius: 4px;
+}
+
+.tabs a.active {
+    background-color: #75aef4;
+    color: white;
+}
+
+form {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+}
+
+input, select {
+    display: block;
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    box-sizing: border-box;
+}
+
+button {
+    margin-top: 10px;
+    padding: 10px;
+    width: 100%;
+    background-color: #75aef4;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #75aef4;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border: 1px solid black;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+}
+
+.flashes {
+    list-style-type: none;
+    padding: 0;
+}
+
+.flashes li {
+    padding: 10px;
+    margin: 10px 0;
+}
+
+.flashes li.success {
+    background-color: #d4edda;
+    color: #75aef4;
+    border: 1px solid #c3e6cb;
+}
+
+.flashes li.error {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+.hd
+{
+    text-align: center;
+    align-items: center;
+}
+.fixed-tab
+{
+    display: flex;
+    gap:10px;
+    justify-content: center;
+    background-color:#3083f7de;
+    color:white;
+    width:100%;
+    padding:20px;
+    text-align:center;
+    position:fixed;
+    top:0;
+    left:0;
+    z-index:1000;
+
+}
+.log {
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+    height: 800%;          
+    text-align: center;   
+}
+    */
+
+    /* Basic Styling */
+/* Full-width header */
+/* Full-width header */
+.header {
+    width: 100%;
+    background-color: #3083f7de; /* Blue background */
+    text-align: center;
+    padding: 20px 0; /* Add padding for spacing */
+    color: white;
+}
+
+/* Heading inside header */
+.hd {
+    margin: 0;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* Centering the container */
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+}
+
+/* Centered white box container */
+.container {
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: fit-content; /* Adjusts width based on content */
+    margin-top: 20px;
+}
+
+.tabs {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    padding: 10px 0;
+    background-color: transparent;
+}
+
+.tabs a {
+    text-decoration: none;
+    color: #333;
+    padding: 10px 15px;
+    font-weight: bold;
+    background-color: transparent;
+    color: #333;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+}
+
+.tabs a.active,
+.tabs a:hover {
+    background-color: #5a8ec4;
+    color: white;
+}
+
+form {
+    margin-top: 20px;
+    width: 100%;
+    text-align: center;
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+}
+
+input, select {
+    display: block;
+    width: 50%;
+    margin: 0 auto;
+    padding: 8px;
+    margin-top: 5px;
+    box-sizing: border-box;
+}
+
+button {
+    margin-top: 10px;
+    padding: 10px;
+    width: 100%;
+    background-color: #75aef4;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+button:hover {
+    background-color: #5a8ec4;
+}
+/* Table styling */
+#results-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+/* Border and styling for table cells */
+#results-table th, #results-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+}
+
+/* Styling for table header */
+#results-table th {
+    background-color: #3083f7de;
+    color: white;
+    font-weight: bold;
+}
+
+/* Alternate row colors for better readability */
+#results-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+/* Hover effect for table rows */
+#results-table tr:hover {
+    background-color: #e2e2e2;
+}

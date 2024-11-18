@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delete Candidate</title>
+    <link rel="stylesheet" href="/static/css/styles.css">
+</head>
+<body  style="background-image: url('/static/css/bg2.jpg'); background-size: cover; background-repeat: no-repeat;">
+    <header class="header">
+        <h1 class="hd">CANDIDATE RANKING AND SELECTION SYSTEM</h1>
+    </header>
+    
+<div class="container">
+    <!-- Tabs for navigation -->
+    <div class="tabs">
+        <a href="/add_candidate">Add Candidate</a>
+        <a href="/classify_candidates">Classify Candidates</a>
+        <a href="/update_candidate">Update Candidate</a><br>
+        <a href="/delete_candidate" class="active">Delete Candidate</a><br>
+        <a href="/login">Log out</a>
+    </div>
+
+    <h2>Delete Candidate</h2>
+
+    <!-- Display flash messages -->
+    {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+            <ul class="flashes">
+                {% for category, message in messages %}
+                    <li class="{{ category }}">{{ message }}</li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+    {% endwith %}
+
+    <form action="/delete_candidate" method="POST" id="delete-candidate-form">
+        <label for="candidate_id">Candidate ID:</label>
+        <input type="text" name="candidate_id" required>
+
+        <button type="submit">Delete Candidate</button>
+    </form>
+</div>
+</body>
+</html>
